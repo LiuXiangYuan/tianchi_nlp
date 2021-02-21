@@ -33,5 +33,5 @@
 
 ##### **baseline提交结果**
 
-![](https://github.com/LiuXiangYuan/tianchi_nlp/tree/main/pictures)
+![](https://github.com/LiuXiangYuan/tianchi_nlp/blob/main/pictures/result.png)
 
