@@ -14,6 +14,7 @@
 - 有关WSL2中Windows和Linux之间的文件操作可参考：https://blog.csdn.net/caoyang_he/article/details/107898883
 - 天池镜像服务及结果提交可参考：https://tianchi.aliyun.com/competition/entrance/231759/tab/174?spm=5176.12586973.0.0.51948f15ygPa4K
 - （该赛题提交result.zip后即可进行评测，因此镜像中的run.sh可以不填写任何内容，但文件必须有）
+- 可参考的提交教程：https://github.com/datawhalechina/team-learning-cv/blob/master/DefectDetection/docker%E6%8F%90%E4%BA%A4%E6%95%99%E7%A8%8B.pdf
 
 
 
@@ -27,11 +28,17 @@
 
 ##### **赛题及baseline分析**
 
-该赛题是一个多任务多分类问题
+该赛题是一个多任务多分类问题，在baseline中采用bert作为embedding层，然后在**[CLS]**上加了一层attention，并针对三个任务设置了独立的线性层，然后对attention后的结果与线性层后的结果做乘积，作为最后的输出结果，loss均采用的交叉熵。
 
 
 
-##### **baseline提交结果**
+##### **提交结果**
 
-![](https://github.com/LiuXiangYuan/tianchi_nlp/blob/main/pictures/result.png)
+- bert-base-chinese(baseline)，4轮即可跑到最佳
+
+![](https://github.com/LiuXiangYuan/tianchi_nlp/blob/main/pictures/bert_base_result.png)
+
+- ernie，2轮即可跑到最佳
+
+![](https://github.com/LiuXiangYuan/tianchi_nlp/blob/main/pictures/ernie_result.png)
 
